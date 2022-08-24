@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProveedoresController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">TELEFONO</th>
+                <th scope="col">TIPO</th>
+                <th scope="col">ACTIVO?</th>
+                <th scope="col">Ult. Fecha Act.</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in lista %}
+            <tr>
+                <th scope="row">{{ data.id }}</th>
+                <th scope="row">{{ data.name }}</th>
+                <th scope="row">{{ data.email }}</th>
+                <th scope="row">{{ data.phone }}</th>
+                <th scope="row">{{ data.type }}</th>
+                <th scope="row">{{ data.active }}</th>
+                <th scope="row">{{ data.updated }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
